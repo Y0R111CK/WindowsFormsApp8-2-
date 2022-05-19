@@ -35,12 +35,14 @@ namespace WindowsFormsApp8
                 for (j = 0; j < 10; j++)
                     if (i == j)
                         s += a[i, i];
-            {
-                if (s > 10)
-                    s = a[i, i] + 13.5;
-                if (s <= 10)
-                    s = s * s - 1.5;
-            }                  
+            for (i = 0; i < 10; i++)
+                for (j = 0; j < 10; j++)
+                {
+                     if (s > 10)
+                         s = a[i, i] + 13.5;
+                     if (s <= 10)
+                         s = s * s - 1.5;
+                }                  
             textBox1.Text = Convert.ToString(s);
         }
     }
